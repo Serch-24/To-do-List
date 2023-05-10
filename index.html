@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="keywords" content="to-do, tareas, lista, gestionar, pendientes, productividad">
+        <meta name="description" content="Organiza tus tareas de forma eficiente con este software de lista de tareas.
+        Añade, modifica y elimina tareas fácilmente y haz seguimiento de tu progreso haciendo uso del checklist.">
+        <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>To - do List</title>
+
+    </head>
+
+    <body data-bs-theme="light">  
+        <div class="container">
+            <div class="row shadow rounded mt-5 mb-5">
+                <header class="col-12 bg-custom m-0 p-3 rounded-top text-light d-flex align-items-center">
+                    <div class="d-flex justify-content-center flex-grow-1">
+                    <h1 class="fs-2"><i class="fa-solid fa-circle-check"></i> To-do List</h1>
+                    </div>
+                    <div class="ms-auto">
+                    <button aria-label="Cambiar tema a oscuro" onclick="cambiarFondo()" class="btn rounded-fill hover">
+                        <i id="f-icon" class="fa-solid fa-moon fs-4 text-light"></i>
+                    </button>
+                    </div>
+                </header>
+                
+                <section>
+                    <div class="col-12 ps-4 mt-4">
+                        <label for="tarea"><h3><i class="fa-solid fa-clipboard-list"></i> Agregar tareas</h3></label>
+                    </div>
+                    <br>
+                    <div class="col-12 mb-2 ps-4">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 col-lg-4 mb-2">
+                                    <input class="form-control col-12" type="text" id="tarea" placeholder="Nombre de tarea">
+                                </div>
+                                <div class="col-md-2 col-sm-12 col-lg-1">
+                                        
+                                    <span class="badge badge-info col-12 m-0 p-0" data-toggle="tooltip" title="Agregar Tarea">
+                                        <button aria-label="Insertar una nueva tarea" id="agregar" class="btn btn-primary col-12">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </button>
+                                    </span>
+                                    
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <section class="col-md-6 col-sm-12 col-lg-6">
+                    <div class="ps-4 mb-3">
+                        <h3 class="mt-3"><i class="fa-solid fa-circle-exclamation"></i> Tareas pendientes</h3>
+                    </div>
+                            
+                    <div class="col-md-6 col-sm-8 col-lg-10 ps-4 mb-4 ps-4 mb-4">
+                        <ul id="lista-tareas">
+        
+                        </ul>
+                        <div id="nothing">
+                            <p>No hay tareas pendientes</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="col-md-6 col-sm-12 col-lg-6">
+                    <div class="ps-4 mb-3">
+                        <h3 class="mt-3"><i class="fa-solid fa-circle-check"></i> Tareas Completadas</h3>
+                    </div>
+                            
+                    <div class="col-md-6 col-sm-8 col-lg-10 ps-4 mb-4">
+                        <ul id="lista-tareas-completadas" class="text-decoration-line-through">
+        
+                        </ul>
+                        <div id="nothing-complete">
+                            <p>No hay tareas completadas</p>
+                        </div>
+                    </div>
+                </section>
+                        
+            </div>
+        </div>
+        
+        <footer>
+            By Sergio Chaparro
+        </footer>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://kit.fontawesome.com/cddf3df688.js" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+
+    </body>
+</html>
