@@ -320,7 +320,6 @@ const cambiarFondo = () => {
 Swal.fire({
     title: '¡Bienvenido!',
     html: '<h2>😀</h2>',
-    width: "30%",
     timer: "2000",
     timerProgressBar: true,
     showConfirmButton: false
